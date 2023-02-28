@@ -119,3 +119,6 @@ marked:
     lazyload: false
     prepend_root: true
     post_asset: true
+
+server:
+  cache: true

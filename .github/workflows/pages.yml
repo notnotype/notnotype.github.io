@@ -31,7 +31,8 @@ jobs:
       - name: Build
         run: |
           ls source/_posts
-          npm run build
+          npm exec hexo list post
+          npm exec hexo g --debug
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
