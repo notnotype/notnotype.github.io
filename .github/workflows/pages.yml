@@ -8,13 +8,15 @@ on:
 jobs:
   pages:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
         with: 
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
       - name: Use Node.js 19.6.x
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: "19.6.x"
       - name: Cache NPM dependencies
@@ -29,6 +31,7 @@ jobs:
       - name: Build
         run: |
           ls source/_posts
+          npm exec hexo clean
           npm exec hexo list post
           npm exec hexo g --debug
       - name: Deploy
