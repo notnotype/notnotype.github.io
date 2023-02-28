@@ -31,11 +31,12 @@ jobs:
         run: npm install
       - name: Build
         run: |
-          ls
-          ls source/_posts
-          npm exec hexo clean --safe
-          npm exec hexo list post --safe
-          npm exec hexo g --debug --safe
+          # ls
+          # ls source/_posts
+          # npm exec hexo clean --safe
+          # npm exec hexo list post --safe
+          # npm exec hexo g --debug --safe
+          npm run build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
