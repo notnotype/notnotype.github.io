@@ -20,20 +20,22 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "19.x"
-      - name: Cache NPM dependencies
-        uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: ${{ runner.OS }}-npm-cache
-          restore-keys: |
-            ${{ runner.OS }}-npm-cache
+      # - name: Cache NPM dependencies
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: node_modules
+      #     key: ${{ runner.OS }}-npm-cache
+      #     restore-keys: |
+      #       ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
         run: npm install
       - name: Build
         run: |
+          ls
           ls source/_posts
           npm exec hexo clean
           npm exec hexo list post
+          ls
           npm exec hexo g --debug
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
