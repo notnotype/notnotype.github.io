@@ -13,12 +13,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with: 
+          ref: master
           submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-      - name: Use Node.js 19.6.x
+          fetch-depth: 2    # Fetch all history for .GitInfo and .Lastmod
+      - name: Use Node.js 19.x
         uses: actions/setup-node@v3
         with:
-          node-version: "19.6.x"
+          node-version: "19.x"
       - name: Cache NPM dependencies
         uses: actions/cache@v3
         with:
