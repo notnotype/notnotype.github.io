@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://blog.notnotype.com/
+url: https://notnotype.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -104,12 +104,12 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
 - type: git
-  repo: 'https://github.com/notnotype/notnotype.github.io.git'
+  repo: 'https://github.com/notnotype/notnotype.github.io'
   branch: gh-page
 
 markdown:
   plugins:
-    - '@renbaoshuo/markdown-it-katex'
+    - "@renbaoshuo/markdown-it-katex"
 
 # post_asset_folder: true
 marked:
