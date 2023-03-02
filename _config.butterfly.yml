@@ -7,9 +7,9 @@ menu:
   Archives: /archives/ || fas fa-archive
   Tags: /tags/ || fas fa-tags
   Categories: /categories/ || fas fa-folder-open
-  List||fas fa-list:
-    Music: /music/ || fas fa-music
-    Movie: /movies/ || fas fa-video
+  # List||fas fa-list:
+  #   Music: /music/ || fas fa-music
+  #   Movie: /movies/ || fas fa-video
   Link: /link/ || fas fa-link
   About: /about/ || fas fa-heart
 
@@ -41,8 +41,8 @@ formal:
   icon: link || the description
 social:
   fab fa-github: https://github.com/notnotype || Github
-  fa-brands fa-bilibili: https:notnotype@gmail.com || Bilibili
-  fas fa-envelope: mailto:notnotype@gmail.com || Email
+  fa-brands fa-bilibili: https://space.bilibili.com/13481029 || Bilibili
+  fas fa-envelope: mailto://notnotype@gmail.com || Email
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統
